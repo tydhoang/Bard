@@ -1,0 +1,24 @@
+/************************************************************
+* README
+* Tyler Hoang
+************************************************************/
+
+Bard.java
+Node.java
+sortByFrequency.java
+Makefile
+test-input.txt
+test-output.txt
+README
+
+
+
+
+Additional Notes:
+So I initially used Java's built-in hashtable, but that method didn't make any sense to me. People on Piazza were saying that once you create the hashtable with the keys being the words, and the frequency being the keys, you're supposed to iterate through the hashtable...and gather all the words of length L and put all those words in an ArrayList. Then sort the ArrayList.
+
+This seems incredibly inefficient to me because if you have to iterate through a hashtable, doesn't that diminish the entire use of a hashtable?
+
+So instead, I create an array of ArrayLists, then sorted each ArrayList. I essentially created my own hash table.
+
+Other than that, I had to do some research on Java's built-in sort function, and that's how I created sortByFrequency.java.
