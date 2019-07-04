@@ -1,4 +1,4 @@
-﻿/************************************************************
+/************************************************************
  * Bard.java
  * Tyler Hoang
  * Prints out the user's requested word of specified length and rank from shakespeare.txt
