@@ -1,8 +1,6 @@
-/************************************************************
+﻿/************************************************************
  * Bard.java
  * Tyler Hoang
- * tydhoang
- * HW 5
  * Prints out the user's requested word of specified length and rank from shakespeare.txt
  *
  * Program creates an array of ArrayLists of type Node (Node being the word and its respective frequency)

@@ -2,7 +2,7 @@
 * README
 * Tyler Hoang
 ************************************************************/
-
+Required Files:
 Bard.java
 Node.java
 sortByFrequency.java
@@ -11,14 +11,38 @@ test-input.txt
 test-output.txt
 README
 
+***********************************************************
+Usage: java –jar Bard.jar <input file> <output file>
+***********************************************************
 
+Overview:
+Bard.java utilizes a self-made version of a hash table in order to find a certain word of desired length and frequency within a text document. The text file being used here is shakespeare.txt - a text file that contains all of shakespeare's texts in one file. The program creates an array of ArrayLists of type Node (Node being the word and its respective frequency). The indexes of the array correspond to the length of the words in each ArrayList. Each ArrayList contains Nodes of the words of the respective length.
+Once the hash table has been created, it is then sorted by highest frequency to lowest frequency with utilization of comparators and an overridden compareTo() method. Words that have the same frequency are sorted lexicographically.
 
+An array of ArrayLists was chosen to be used over Java's built-in hash table because it seemed to be a more efficient solution. Utilization of Java's hash table would go as follows: 
+1) Create the hash table with the keys being the words and the values being their respective frequencies.
+2) At the user's requested length L, traverse through the hash table to find each word of length L and store them in an ArrayList.
+3) Utilize sortByFrequency to sort this ArrayList from highest frequency to lowest frequency.
+4) At the user's requested frequency i, return the ith most frequent word of length L.
+- This traversal would occur for each of the user's requests, which is incredibly inefficient. Constant iteration through a hash table seems to diminish the use of a hash table. 
 
-Additional Notes:
-So I initially used Java's built-in hashtable, but that method didn't make any sense to me. People on Piazza were saying that once you create the hashtable with the keys being the words, and the frequency being the keys, you're supposed to iterate through the hashtable...and gather all the words of length L and put all those words in an ArrayList. Then sort the ArrayList.
+The solution present in this program goes as follows:
+1) Create an array of ArrayLists, with the values of the array being the lengths of the words (1 - 60) and with each respective ArrayList containing the words of each particular length.
+2) Sort each ArrayList within the array utilizing sortByFrequency.
+3) Find each of the user's requested words in O(1) time.
 
-This seems incredibly inefficient to me because if you have to iterate through a hashtable, doesn't that diminish the entire use of a hashtable?
+Sample Input File:
+5 3
+10 0
+9 2
+8 14
+8 15
+26 0
 
-So instead, I create an array of ArrayLists, then sorted each ArrayList. I essentially created my own hash table.
-
-Other than that, I had to do some research on Java's built-in sort function, and that's how I created sortByFrequency.java.
+Sample Output File:
+enter
+gloucester
+messenger
+business
+personal
+-

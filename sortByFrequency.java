@@ -1,8 +1,6 @@
 /************************************************************
  * sortByFrequency.java
  * Tyler Hoang
- * tydhoang
- * HW 5
  * Used to sort an ArrayList of type Node by frequency in descending order
  ************************************************************/
 import java.util.*; 

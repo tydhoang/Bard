@@ -1,8 +1,6 @@
 /************************************************************
  * Node.java
  * Tyler Hoang
- * tydhoang
- * HW 5
  * Node class used to create a new Node to be added to an ArrayList
  ************************************************************/
 public class Node {
